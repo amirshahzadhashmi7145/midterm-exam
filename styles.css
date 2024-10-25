@@ -1,0 +1,67 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+
+.main {
+    background-image: url('/assets/background.png');
+    background-size: cover;
+}
+
+.hamburger-icon {
+    width: 90px;
+    height: 90px;
+    padding-left: 50px;
+    padding-top: 60px;
+    color: dimgrey;
+}
+
+.hero-title {
+    color: #EC5242;
+}
+
+.text-7xl {
+    font-weight: bold;
+}
+
+.hero-desc {
+    border: 9px solid white;
+    background-color: #F9F9FA;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.datetime {
+    font-weight: bold;
+}
+
+div > hr {
+    border: none;
+    height: 3px;
+    background-color: #EC5242;
+    width: 10%;
+    margin: 0 auto;
+}
+
+.program-container {
+    background-image: url("/assets/bg2.jpg");
+}
+
+.card-main {
+    background-color: rgba(211, 211, 211, 0.1);
+    align-items: center;
+}
+
+.card-second-div {
+    color: #EC5242;
+}
+
+.join-button {
+    background-color: #EC5242;
+    color: white;
+    font-weight: 100;
+}
+

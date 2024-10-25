@@ -1,34 +1,22 @@
 // script.js
 const peopleData = [
     {
-        title: "Professor Heller",
-        institution: "at Howard University",
-        description: "Studies common creative practices in technology.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDV-X4JQ42D1BE148V2p9FuvBV0MvxNN4hA&s"
+        "title": "Sundar Pichai",
+        "institution": "CEO of Google and Alphabet",
+        "description": "A renowned technology leader and visionary, Sundar Pichai has been instrumental in driving Google's growth and innovation.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoguHACZpXrj5llOZZySnZ4OAxMg4z64julw&s"
     },
     {
-        title: "Dr. Emily Green",
-        institution: "at MIT",
-        description: "Explores advancements in bioinformatics.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDV-X4JQ42D1BE148V2p9FuvBV0MvxNN4hA&s"
+        "title": "Satya Nadella",
+        "institution": "CEO of Microsoft",
+        "description": "Satya Nadella is a respected technology executive who has led Microsoft through a successful transformation.",
+        "image": "https://static.startuptalky.com/2022/05/Satya-Nadella-Success-Story-StartupTalky.jpg",
     },
     {
-        title: "Dr. John Smith",
-        institution: "at Stanford University",
-        description: "Focuses on machine learning algorithms.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDV-X4JQ42D1BE148V2p9FuvBV0MvxNN4hA&s"
-    },
-    {
-        title: "Dr. Sarah Johnson",
-        institution: "at Oxford University",
-        description: "Investigates environmental impacts.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDV-X4JQ42D1BE148V2p9FuvBV0MvxNN4hA&s"
-    },
-    {
-        title: "Dr. Lucas Chen",
-        institution: "at UC Berkeley",
-        description: "Develops robotics for autonomous applications.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDV-X4JQ42D1BE148V2p9FuvBV0MvxNN4hA&s"
+        "title": "Tim Cook",
+        "institution": "CEO of Apple",
+        "description": "Tim Cook is a visionary leader who has continued Apple's legacy of innovation and success.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTXiAs9A9SNGXOf3TDY8Et9kf9YueN4wi-w&s"
     }
 ];
 
@@ -37,16 +25,17 @@ const container = document.getElementById('people-container');
 // Loop through the data and create cards dynamically
 peopleData.forEach(person => {
     const personCard = document.createElement('div');
-    personCard.classList.add('my-7', 'card', 'flex', 'flex-row','ml-10');
+    personCard.classList.add('my-7', 'card', 'flex', 'flex-row', 'gap-10', 'mx-10');  // Added classes
 
     personCard.innerHTML = `
-        <div class="w-1/3 h-1/3">
+        <div class="w-96 flex">
             <img src="${person.image}" alt="${person.title}" class="">
         </div>
-        <div class="py-3 w-2/3 h-2/3">
-            <h1 class="text-4xl">${person.title}</h1>
-            <p class="text-red-600 text-3xl">${person.institution}</p>
-            <p class="text-2xl">${person.description}</p>
+        <div class="w-2/3 py-3 flex flex-col gap-8">
+            <h1 class="text-5xl font-bold text-grey-600">${person.title}</h1>
+            <p class="text-red-500 text-2xl">${person.institution}</p>
+            <hr class="bcard bg-gray-400 w-10 ml-0">
+            <p class="text-xl text-gray-700 font-bold">${person.description}</p>
         </div>
     `;
 
